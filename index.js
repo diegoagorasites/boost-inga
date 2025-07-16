@@ -52,7 +52,7 @@ async function simulateVisit(browser, visitNumber, url) {
     }
 
     // Aguarda simulação de leitura
-    await page.waitForTimeout(5000);
+    await new Promise(resolve => setTimeout(resolve, 5000));
   } catch (err) {
     console.error(`❌ Erro durante visita: ${err.message}`);
   } finally {
